@@ -29,23 +29,3 @@ A n8n workflow that turns raw invoice uploads into structured data and logs them
 3. **Update the Sheets node** to your spreadsheet (or use the provided one if it’s yours).
 4. **Enable the Form Trigger** (Webhook) and test with one or more invoices.
 
-## Tips / production notes
-- If you expect frequent multi‑file uploads, keep the “one‑item‑per‑file” Code node—this is what prevents binary key collisions.
-- Consider enabling **Continue On Fail** for Mistral/Sheets nodes so one bad file doesn’t stop the rest.
-- There’s a known trailing‑space pitfall in column/attribute names (e.g., `tax_amount `). Use `tax_amount` consistently to avoid mapping issues.
-- For smaller payloads, set OCR to avoid embedding `image_base64` unless you really need it for debugging.
-- Prefer storing the original invoice in object storage (S3/GCS) and writing the link to Sheets for traceability.
-
-## Repository structure
-```
-/auto-invoice-processor/
-  ├─ workflows/
-  │   └─ Auto-Invoice Processor (1WF).json
-  ├─ docs/
-  │   └─ architecture.md
-  ├─ .gitignore
-  └─ README.md
-```
-
-## CV blurb
-**Auto‑Invoice Processor (n8n):** Multi‑file‑resilient workflow that uploads invoices to Mistral OCR, extracts structured fields with an LLM, and auto‑logs rows to Google Sheets.
