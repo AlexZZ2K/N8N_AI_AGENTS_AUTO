@@ -3,6 +3,8 @@
 
 A n8n workflow that turns raw invoice uploads into structured data and logs them to Google Sheets. It uploads each file to Mistral OCR, parses fields with an LLM, and appends a clean row to a spreadsheet—hands‑off invoice intake from upload to analytics. This is an adapted and modified version of Nate Herk's flow, this one just allows for multiple files to be uploaded instead of one file per run!
 
+Notes: Planning on integrating Gmail and Whatsapp to make it easier to send files to the AI!
+
 ## What’s inside
 - **Workflow JSON:** `workflows/Auto-Invoice Processor (1WF).json`
 ![Example Image](Auto_invoice.png)
