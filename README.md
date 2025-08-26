@@ -17,21 +17,7 @@ A production‑ready n8n workflow that turns raw invoice uploads into structured
 8. **Google Sheets – Append** writes a tidy row for each invoice.
 
 ```
-Form (Upload Files)
-  → Code (one‑item‑per‑file)
-  → Loop over items ─┐
-        ↓            │
-  Upload to Mistral  │
-        ↓            │
-  Get Signed URL     │
-        ↓            │
-  OCR (Mistral)      │
-        ↓            │
-  Information Extractor ⇐ OpenAI Chat Model
-        ↓
-  Google Sheets (Append)
-        ↑
-       Wait ─────────┘
+
 ```
 
 ## Quick start (local n8n)
