@@ -1,8 +1,7 @@
-![Workflow overview](docs/flow.png)
 
 # Auto‑Invoice Processor (n8n)
 
-A production‑ready n8n workflow that turns raw invoice uploads into structured data and logs them to Google Sheets. It uploads each file to Mistral OCR, parses fields with an LLM, and appends a clean row to a spreadsheet—hands‑off invoice intake from upload to analytics.
+A n8n workflow that turns raw invoice uploads into structured data and logs them to Google Sheets. It uploads each file to Mistral OCR, parses fields with an LLM, and appends a clean row to a spreadsheet—hands‑off invoice intake from upload to analytics. This is an adapted and modified version of Nate Herk's flow, this one just allows multiple files to be uploaded instead of one file per run!
 
 ## What’s inside
 - **Workflow JSON:** `workflows/Auto-Invoice Processor (1WF).json`
@@ -19,21 +18,7 @@ A production‑ready n8n workflow that turns raw invoice uploads into structured
 8. **Google Sheets – Append** writes a tidy row for each invoice.
 
 ```
-Form (Upload Files)
-  → Code (one‑item‑per‑file)
-  → Loop over items ─┐
-        ↓            │
-  Upload to Mistral  │
-        ↓            │
-  Get Signed URL     │
-        ↓            │
-  OCR (Mistral)      │
-        ↓            │
-  Information Extractor ⇐ OpenAI Chat Model
-        ↓
-  Google Sheets (Append)
-        ↑
-       Wait ─────────┘
+
 ```
 
 ## Quick start (local n8n)
