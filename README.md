@@ -5,7 +5,7 @@ A n8n workflow that turns raw invoice uploads into structured data and logs them
 
 ## What’s inside
 - **Workflow JSON:** `workflows/Auto-Invoice Processor (1WF).json`
-- **Docs:** Architecture & setup notes in `docs/`
+![Example Image](Auto_invoice.png)
 
 ## How it works (flow)
 1. **Form Trigger – “Upload Files”**: end‑users upload one or more invoices (PDF/images) via a form with field **“File invoice”**.
@@ -16,8 +16,7 @@ A n8n workflow that turns raw invoice uploads into structured data and logs them
 6. **HTTP – Run OCR** with `model: mistral-ocr-latest` to extract text/vision features.
 7. **Information Extractor** (LLM) pulls structured fields (invoice_id, company, dates, totals, tax, product lines).
 8. **Google Sheets – Append** writes a tidy row for each invoice.
-
-![Example Image](Auto_invoice.png)
+![Example Image](Invoices result.png)
 ```
 
 ```
