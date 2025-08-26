@@ -6,7 +6,7 @@ A n8n workflow that turns raw invoice uploads into structured data and logs them
 Notes: Planning on integrating Gmail and Whatsapp to make it easier to send files to the AI!
 
 ## What’s inside
-- **Workflow JSON:** `workflows/Auto-Invoice Processor (1WF).json`
+- **Workflow JSON:** `Auto-Invoice_Processor.json`
 ![Example Image](Auto_invoice.png)
 
 ## How it works (flow)
