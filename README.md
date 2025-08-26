@@ -23,7 +23,7 @@ Notes: Planning on integrating Gmail and Whatsapp to make it easier to send file
 
 ## Quick start (local n8n)
  You have to set up your own credentials & API keys for it to work!
-1. **Import** `workflows/Auto-Invoice Processor (1WF).json` into n8n.
+1. **Import** `Auto-Invoice Processor (1WF).json` into n8n.
 2. **Set credentials**:
    - Mistral API key (HTTP nodes use header auth).
    - Google Sheets OAuth for the target spreadsheet.
