@@ -17,7 +17,7 @@ A n8n workflow that turns raw invoice uploads into structured data and logs them
 7. **Information Extractor** (LLM) pulls structured fields (invoice_id, company, dates, totals, tax, product lines).
 8. **Google Sheets – Append** writes a tidy row for each invoice.
    
- ![Example Image](Invoices result.png)
+ ![Example Image](Invoices_result.png)
 
 ## Quick start (local n8n)
 1. **Import** `workflows/Auto-Invoice Processor (1WF).json` into n8n.
